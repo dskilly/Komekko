@@ -27,6 +27,22 @@ bot.on("disconnected", function() {
 	bot.loginWithToken("token");
 });
 
+//For RESTful API *IN PROGRESS*
+var handleREST = function(data) {
+	stats = fs.statSync('data.json');
+	if(stats.isFile()) {
+		var str = ',[{date:' + data.date + ',msgs:' + data.msgs + ',mems:' + data.mems + '}]}',
+		ws = fs.createWriteStream('data.json', { flags: 'r+', start: stats.size - 1 });
+		ws.write(str);
+		ws.end();
+	} else {
+		var str = '{[{date:' + data.date + ',msgs:' + data.msgs + ',mems:' + data.mems + '}]}',
+		ws = fs.createWriteStream('data.json');
+		ws.write(str);
+		ws.end();
+	}
+};
+
 var rollback = function(client) {
 	client.query('ROLLBACK', function() {
 		client.end();
