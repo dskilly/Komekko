@@ -31,15 +31,13 @@ bot.on("disconnected", function() {
 var handleREST = function(data) {
 	stats = fs.statSync('data.json');
 	if(stats.isFile()) {
-		var str = ',{date:' + data.date + ',msgs:' + data.msgs + ',mems:' + data.mems + '}]',
+		var str = ',{"date":' + data.date + ',"msgs":' + data.msgs + ',"mems":' + data.mems + '}]',
 		ws = fs.createWriteStream('data.json', { flags: 'r+', start: stats.size - 1 });
 		ws.write(str);
-		ws.end();
 	} else {
-		var str = '[{date:' + data.date + ',msgs:' + data.msgs + ',mems:' + data.mems + '}]',
+		var str = '[{"date":' + data.date + ',"msgs":' + data.msgs + ',"mems":' + data.mems + '}]',
 		ws = fs.createWriteStream('data.json');
 		ws.write(str);
-		ws.end();
 	}
 };
 
