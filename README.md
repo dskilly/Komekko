@@ -1,37 +1,11 @@
-## Welcome to GitHub Pages
+## Komekko Discord Bot
 
-You can use the [editor on GitHub](https://github.com/dskilly/Komekko/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+This is a side project that I work on at times, I am still new to programming so don't expect too much...
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+### What it does
 
-### Markdown
+It doesn't do anything special for now, only tracks messages and joining members for a server every minute and stores that data in a postgres database
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+### Plans for the future...
 
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/dskilly/Komekko/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+There were plans to move on the data to display it on a website using D3 but... welp Xd
