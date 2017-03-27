@@ -8,12 +8,10 @@ var client = new pg.Client({
 	port: #### //port for the pg
 });
 client.connect();
-var minute = 60000;
+var minute = 60000; //tracking time in miliseconds
 var counter = [-1, -1];
 var nextMin = -1;
-var NGNL = "191455136013352960";
-var devChannelId = "206587849191981056";
-var generalChannelId = "191455136013352960";
+var server = "server id here"; //replace the string content with the server id being tracked
 
 bot.on("message", function(message) {
 	tracker(message.timestamp, 0);
